@@ -1,5 +1,7 @@
 package com.android.ippd.cameraapp;
 
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.Environment;
@@ -16,6 +18,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
 
     private final String TAG = ".MainActivity";
@@ -31,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Create an instance of Camera
-        mCamera = getCameraInstance();
+        if (checkCameraHardware(this)){
+            // Create an instance of Camera
+            mCamera = getCameraInstance();
+        }
 
         // Create our Preview view and set it as the content of our activity.
         mPreview = new CameraPreview(this, mCamera);
@@ -117,9 +122,23 @@ public class MainActivity extends AppCompatActivity {
         return mediaFile;
     }
 
+    private boolean checkCameraHardware(Context context){
+        if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
+            // This device has a camera
+            return true;
+        } else {
+            // No camera on this device
+            return false;
+        }
+    }
+
     @Override
     public void onDestroy(){
         super.onDestroy();
-        mCamera.release();
+        if (mCamera != null){
+            mCamera.stopPreview();
+            mCamera.release();
+            mCamera = null;
+        }
     }
 }
