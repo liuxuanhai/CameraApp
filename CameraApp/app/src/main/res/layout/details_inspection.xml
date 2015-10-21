@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#295e35"
+    tools:context=".InspectionDetails">
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/backButton"
+        android:text="@string/backButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/title"
+        android:layout_alignRight="@+id/title"
+        android:layout_alignEnd="@+id/title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:text="@string/inspec_details_title"
+        android:id="@+id/inspec_details"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/backButton"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:paddingTop="16dp"
+        android:text="@string/title"
+        android:id="@+id/title"
+        android:layout_below="@+id/inspec_details"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:paddingTop="16dp"
+        android:text="@string/engine"
+        android:id="@+id/engine"
+        android:layout_below="@+id/title"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:paddingTop="16dp"
+        android:text="@string/inspector"
+        android:id="@+id/inspector"
+        android:layout_below="@+id/engine"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:paddingTop="16dp"
+        android:text="@string/part"
+        android:id="@+id/part"
+        android:layout_below="@+id/comments"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:paddingTop="16dp"
+        android:text="@string/comments"
+        android:id="@+id/comments"
+        android:layout_below="@+id/inspector"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleText"
+        android:layout_above="@+id/engine"
+        android:layout_toRightOf="@+id/title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="textMultiLine"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/engineText"
+        android:layout_above="@+id/inspector"
+        android:layout_alignRight="@+id/titleText"
+        android:layout_alignEnd="@+id/titleText"
+        android:layout_toEndOf="@+id/engine"
+        android:layout_toRightOf="@+id/engine"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inspectorText"
+        android:layout_above="@+id/part"
+        android:layout_alignRight="@+id/titleText"
+        android:layout_alignEnd="@+id/titleText"
+        android:layout_toRightOf="@+id/inspector"
+        android:layout_toEndOf="@+id/inspector"
+        android:inputType="textMultiLine" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentsText"
+        android:inputType="textMultiLine"
+        android:layout_alignBottom="@+id/comments"
+        android:layout_alignRight="@+id/inspectorText"
+        android:layout_alignEnd="@+id/inspectorText"
+        android:layout_toRightOf="@+id/comments"
+        android:layout_toEndOf="@+id/comments" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_above="@+id/comments"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/inspectorText"
+        android:layout_alignStart="@+id/inspectorText" />
+    <Spinner
+        android:id="@+id/partsSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_toRightOf="@+id/part"
+        android:layout_below="@id/comments"/>
+
+</RelativeLayout>
+

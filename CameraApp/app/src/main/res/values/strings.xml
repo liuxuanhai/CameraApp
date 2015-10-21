@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">CameraApp</string>
     <string name="button">Capture</string>
+    <string name="title">Title:</string>
+    <string name="inspec_details_title">Inspection details</string>
+    <string name="engine">Engine:</string>
+    <string name="inspector">Inspector:</string>
+    <string name="part">Part:</string>
+    <string name="comments">Comments:</string>
+    <string name="backButton">Back</string>
 </resources>
