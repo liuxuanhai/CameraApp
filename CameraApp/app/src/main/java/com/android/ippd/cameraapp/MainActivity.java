@@ -1,9 +1,12 @@
 package com.android.ippd.cameraapp;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +19,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+@SuppressWarnings("ALL")
+public class MainActivity extends Activity {
 
     private final String TAG = ".MainActivity";
     public static final int MEDIA_TYPE_IMAGE = 1;
@@ -25,14 +29,17 @@ public class MainActivity extends AppCompatActivity {
     private Camera mCamera;
     private CameraPreview mPreview;
     private Button captureButton;
+    private Button settingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Create an instance of Camera
-        mCamera = getCameraInstance();
+        if (checkCameraHardware(this)){
+            // Create an instance of Camera
+            mCamera = getCameraInstance();
+        }
 
         // Create our Preview view and set it as the content of our activity.
         mPreview = new CameraPreview(this, mCamera);
@@ -45,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // get an image from the camera
                 mCamera.takePicture(null,null,mPicture);
+            }
+        });
+
+        settingsButton = (Button)findViewById(R.id.button_settings);
+        settingsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                // Open settings activity
+                Intent i = new Intent(MainActivity.this,InspectionDetails.class);
+                startActivity(i);
             }
         });
     }
@@ -117,9 +134,23 @@ public class MainActivity extends AppCompatActivity {
         return mediaFile;
     }
 
+    private boolean checkCameraHardware(Context context){
+        if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
+            // This device has a camera
+            return true;
+        } else {
+            // No camera on this device
+            return false;
+        }
+    }
+
     @Override
     public void onDestroy(){
         super.onDestroy();
-        mCamera.release();
+        if (mCamera != null){
+            mCamera.stopPreview();
+            mCamera.release();
+            mCamera = null;
+        }
     }
 }
