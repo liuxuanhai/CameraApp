@@ -52,6 +52,7 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
                 // get an image from the camera
                 mCamera.takePicture(null,null,mPicture);
+                Log.d(TAG,"Taking a picture");
             }
         });
 
@@ -72,7 +73,8 @@ public class MainActivity extends Activity {
 
         @Override
         public void onPictureTaken(byte[] data, Camera camera){
-
+            mCamera.startPreview();
+            Log.d(TAG,"onPictureTaken");
             File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE);
             if (pictureFile == null) {
                 Log.d(TAG, "Error creating media file, checking storage permissions " );
