@@ -1,11 +1,12 @@
 package com.android.ippd.cameraapp;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @SuppressWarnings("ALL")
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private final String TAG = ".MainActivity";
     public static final int MEDIA_TYPE_IMAGE = 1;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private Camera mCamera;
     private CameraPreview mPreview;
     private Button captureButton;
+    private Button settingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // get an image from the camera
                 mCamera.takePicture(null,null,mPicture);
+            }
+        });
+
+        settingsButton = (Button)findViewById(R.id.button_settings);
+        settingsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                // Open settings activity
+                Intent i = new Intent(MainActivity.this,InspectionDetails.class);
+                startActivity(i);
             }
         });
     }

@@ -1,16 +1,14 @@
 package com.android.ippd.cameraapp;
 
-import android.graphics.Color;
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 /**
  * Created by MyMac on 10/21/15.
  */
-public class InspectionDetails extends MainActivity {
+public class InspectionDetails extends Activity {
 
 
     @Override
