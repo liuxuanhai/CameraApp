@@ -35,6 +35,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Hide the soft keys
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
 
         if (checkCameraHardware(this)){
@@ -44,15 +46,16 @@ public class MainActivity extends Activity {
 
         // Create our Preview view and set it as the content of our activity.
         mPreview = new CameraPreview(this, mCamera);
-        mPreview.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
-            }
-        });
+//        mPreview.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view){
+//                getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
+//            }
+//        });
         FrameLayout preview = (FrameLayout)findViewById(R.id.camera_preview);
         preview.addView(mPreview);
 
+        // Button to capture a picture
         captureButton = (Button)findViewById(R.id.button_capture);
         captureButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +66,7 @@ public class MainActivity extends Activity {
             }
         });
 
+        // Button to go to settings activity
         settingsButton = (Button)findViewById(R.id.button_settings);
         settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -157,6 +161,7 @@ public class MainActivity extends Activity {
     @Override
     public void onDestroy(){
         super.onDestroy();
+        // Release the camera when activity is destroyed
         if (mCamera != null){
             mCamera.stopPreview();
             mCamera.release();
