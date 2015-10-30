@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
 
         if (checkCameraHardware(this)){
             // Create an instance of Camera
@@ -43,6 +44,12 @@ public class MainActivity extends Activity {
 
         // Create our Preview view and set it as the content of our activity.
         mPreview = new CameraPreview(this, mCamera);
+        mPreview.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
+            }
+        });
         FrameLayout preview = (FrameLayout)findViewById(R.id.camera_preview);
         preview.addView(mPreview);
 
@@ -65,6 +72,7 @@ public class MainActivity extends Activity {
                 startActivity(i);
             }
         });
+
     }
 
 
