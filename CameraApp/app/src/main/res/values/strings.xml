@@ -3,6 +3,7 @@
     <string name="button">Capture</string>
     <string name="title">Title:</string>
     <string name="inspec_details_title">Inspection details</string>
+    <string name="part_details_title">Part Details</string>
     <string name="engine">Engine:</string>
     <string name="inspector">Inspector:</string>
     <string name="part">Part:</string>

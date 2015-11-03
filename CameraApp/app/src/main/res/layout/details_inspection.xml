@@ -8,21 +8,9 @@
     android:paddingTop="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#295e35"
+    android:background="#91b28e"
     tools:context=".InspectionDetails">
 
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/backButton"
-        android:text="@string/backButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/title"
-        android:layout_alignRight="@+id/title"
-        android:layout_alignEnd="@+id/title" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,8 +22,7 @@
         android:paddingRight="10sp"
         android:text="@string/inspec_details_title"
         android:id="@+id/inspec_details"
-        android:layout_centerHorizontal="true"
-        android:layout_toRightOf="@+id/backButton"/>
+        android:layout_centerHorizontal="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,7 +61,7 @@
         android:textSize="30sp"
         android:paddingTop="16dp"
         android:text="@string/part"
-        android:id="@+id/part"
+        android:id="@+id/partMenu"
         android:layout_below="@+id/comments"/>
     <TextView
         android:layout_width="wrap_content"
@@ -112,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/inspectorText"
-        android:layout_above="@+id/part"
+        android:layout_above="@+id/partMenu"
         android:layout_alignRight="@+id/titleText"
         android:layout_alignEnd="@+id/titleText"
         android:layout_toRightOf="@+id/inspector"
@@ -144,7 +131,7 @@
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
-        android:layout_toRightOf="@+id/part"
+        android:layout_toRightOf="@+id/partMenu"
         android:layout_below="@id/comments"/>
 
 </RelativeLayout>
