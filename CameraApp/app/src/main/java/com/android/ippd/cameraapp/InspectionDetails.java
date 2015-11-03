@@ -18,6 +18,7 @@ public class InspectionDetails extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.slide_up,R.anim.no_change);
         setContentView(R.layout.details_inspection);
 
         // Hide soft keys
