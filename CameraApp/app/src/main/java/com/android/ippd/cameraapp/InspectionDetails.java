@@ -14,7 +14,7 @@ import android.widget.Spinner;
  */
 public class InspectionDetails extends Activity {
 
-    private static final String TAG = ".InspectionDetails Activity";
+    private static final String TAG = ".InspectDetailsActivity";
     private Button backButton;
     private Spinner partsSpinner;
 
@@ -38,7 +38,7 @@ public class InspectionDetails extends Activity {
         partsSpinner.setAdapter(adapter);
 
 
-        backButton = (Button)findViewById(R.id.backButton);
+        backButton = (Button) findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
