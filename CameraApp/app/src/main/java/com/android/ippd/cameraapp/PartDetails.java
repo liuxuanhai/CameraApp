@@ -11,6 +11,7 @@ import android.widget.Button;
 public class PartDetails extends Activity{
 
     private Button submitPartButton;
+    private String[] partsArray = new String[50];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,17 @@ public class PartDetails extends Activity{
 //                NavUtils.navigateUpFromSameTask(PartDetails.this);
 //        }
 //        };
+
     }
 
+    protected String[] addNewPart(String part){
+        for(int i = 0; i<50; i++){
+            if (partsArray[i] == null) {
+                partsArray[i] = part;
+                return partsArray;
+            }
+        }
+        // if return occurs here, then max of 50 parts has been reached for inspection
+        return partsArray;
+    }
 }
