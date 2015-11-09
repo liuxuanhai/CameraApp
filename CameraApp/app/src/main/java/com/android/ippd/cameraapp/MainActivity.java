@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
     private Camera mCamera;
     private CameraPreview mPreview;
     private Button captureButton;
-    private Button settingsButton;
+    private Button inspectionDetailsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,13 +66,14 @@ public class MainActivity extends Activity {
             }
         });
 
-        // Button to go to settings activity
-        settingsButton = (Button)findViewById(R.id.button_settings);
-        settingsButton.setOnClickListener(new View.OnClickListener(){
+        // Button to go to InspectionDetails activity
+        inspectionDetailsButton = (Button)findViewById(R.id.button_inspectionDetails);
+        inspectionDetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
+                Log.d(TAG, "Open settings activity");
                 // Open settings activity
-                Intent i = new Intent(MainActivity.this,InspectionDetails.class);
+                Intent i = new Intent(MainActivity.this, InspectionDetails.class);
                 startActivity(i);
             }
         });
@@ -167,5 +168,12 @@ public class MainActivity extends Activity {
             mCamera.release();
             mCamera = null;
         }
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        // Hide soft keys when resuming the activity
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
     }
 }
