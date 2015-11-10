@@ -17,6 +17,7 @@ public class InspectionDetails extends Activity {
     private static final String TAG = ".InspectDetailsActivity";
     private Button backButton;
     private Spinner partsSpinner;
+    private PartDetails PD = new PartDetails();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,10 @@ public class InspectionDetails extends Activity {
 
         // for parts dropdown, will list parts previously created as well as option to create new part
         partsSpinner = (Spinner) findViewById(R.id.partsSpinner);
-        String[] items = new String[]{"New Part"};
+        PD.partsArray_init();
+        PD.addNewPart("New part1"); // test
+        PD.addNewPart("New part2"); // test
+        String[] items = PD.getPartsArray();
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
         partsSpinner.setAdapter(adapter);

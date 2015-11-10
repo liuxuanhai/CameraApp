@@ -31,14 +31,26 @@ public class PartDetails extends Activity{
 
     }
 
+    //initialize array used for partsSpinner
+    protected void partsArray_init(){
+        //initialize partsArray
+        for(int i = 0; i<partsArray.length; i++){
+            partsArray[i] = "";
+        }
+    }
+
+    // adds new part to partsArray
     protected String[] addNewPart(String part){
-        for(int i = 0; i<50; i++){
-            if (partsArray[i] == null) {
+        for(int i = 0; i<partsArray.length; i++){
+            if (partsArray[i] == "") {
                 partsArray[i] = part;
                 return partsArray;
             }
         }
         // if return occurs here, then max of 50 parts has been reached for inspection
+        return partsArray;
+    }
+    protected String[] getPartsArray(){
         return partsArray;
     }
 }
