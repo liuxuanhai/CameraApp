@@ -63,8 +63,7 @@ public class InspectionDetails extends Activity {
         // for parts dropdown, will list parts previously created as well as option to create new part
         partsSpinner = (Spinner) findViewById(R.id.partsSpinner);
         DS.partsArray_init();
-        DS.addNewPart("New part1"); // test
-        DS.addNewPart("New part2"); // test
+        DS.addNewPart("Part 1"); // test
         String[] items = DS.getPartsArray();
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);

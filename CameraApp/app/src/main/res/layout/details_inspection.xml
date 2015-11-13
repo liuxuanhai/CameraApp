@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/titleText"
         android:layout_above="@+id/engine"
-        android:layout_toEndOf="@+id/title"
+        android:layout_toRightOf="@+id/title"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:inputType="textMultiLine"/>
@@ -142,7 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/inspec_details"
-        android:layout_toStartOf="@+id/inspec_details"
+        android:layout_toLeftOf="@+id/inspec_details"
         android:layout_alignBottom="@+id/inspec_details"
         android:layout_alignRight="@+id/title"
         android:layout_alignEnd="@+id/title" />

@@ -16,7 +16,7 @@ public class PartDetails extends Activity{
     private static final String TAG = ".PartDetailsActivity";
     private Button backButton;
     private Button submitPartButton;
-    private DataStorage DS;
+    private DataStorage DS = new DataStorage();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
