@@ -30,6 +30,7 @@ public class MainActivity extends Activity {
     private CameraPreview mPreview;
     private Button captureButton;
     private Button inspectionDetailsButton;
+    private Button usbHostButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +79,16 @@ public class MainActivity extends Activity {
             }
         });
 
+        // Button to view usb host connection details
+        usbHostButton = (Button)findViewById(R.id.button_usbHost);
+        usbHostButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Log.d(TAG, "Open usb host connection activity");
+                Intent i = new Intent(MainActivity.this, UsbHostActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
 
