@@ -58,11 +58,14 @@
             android:parentActivityName=".InspectionDetails">
 
         </activity>
-
-
         <activity
             android:name=".UsbHostActivity">
         </activity>
+        <activity
+            android:name=".UsbCameraActivity"
+            android:label="@string/app_name">
+        </activity>
+
     </application>
 
 </manifest>

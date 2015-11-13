@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
     private Button captureButton;
     private Button inspectionDetailsButton;
     private Button usbHostButton;
+    private Button usbTestButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +88,17 @@ public class MainActivity extends Activity {
                 Log.d(TAG, "Open usb host connection activity");
                 Intent i = new Intent(MainActivity.this, UsbHostActivity.class);
                 startActivity(i);
+            }
+        });
+
+        // Button to view usb test
+        usbTestButton = (Button)findViewById(R.id.button_usbTest);
+        usbTestButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(MainActivity.this, UsbCameraActivity.class);
+                startActivity(i);
+                Log.d(TAG,"start usb test activity");
             }
         });
     }

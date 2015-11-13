@@ -11,14 +11,15 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 /**
- * Created by Nicole K. on 10/21/15.
+ * Created by Nicole on 10/21/15.
  */
 public class InspectionDetails extends Activity {
 
     private static final String TAG = ".InspectDetailsActivity";
+    private Button backButton;
     private Button newPartButton;
     private Spinner partsSpinner;
-    private PartDetails PD = new PartDetails();
+    private DataStorage DS = new DataStorage();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,20 +33,7 @@ public class InspectionDetails extends Activity {
         // Hide the soft keys
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
 
-        // for parts dropdown, will list parts previously created as well as option to create new part
-        partsSpinner = (Spinner) findViewById(R.id.partsSpinner);
-
-        //Call below creates unnecessary spaces in spinner FIX NEEDED
-        PD.partsArray_init();
-        PD.addNewPart("New part1"); // test
-        PD.addNewPart("New part2"); // test
-        String[] items = PD.getPartsArray();
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        partsSpinner.setAdapter(adapter);
-
-
-        Button backButton = (Button) findViewById(R.id.backButton);
+        backButton = (Button) findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,12 +52,24 @@ public class InspectionDetails extends Activity {
         newPartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "Open PartDetails activity");
-                // Open PartDetails activity
-                Intent x = new Intent(InspectionDetails.this, PartDetails.class);
-                startActivity(x);
+                Log.d(TAG, "Open settings activity");
+                // Open settings activity
+                Intent i = new Intent(InspectionDetails.this, PartDetails.class);
+                startActivity(i);
             }
         });
+
+
+        // for parts dropdown, will list parts previously created as well as option to create new part
+        partsSpinner = (Spinner) findViewById(R.id.partsSpinner);
+        DS.partsArray_init();
+        DS.addNewPart("New part1"); // test
+        DS.addNewPart("New part2"); // test
+        String[] items = DS.getPartsArray();
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        partsSpinner.setAdapter(adapter);
+
     }
 
     // Override onBackPressed to animate view from top to bottom when leaving view

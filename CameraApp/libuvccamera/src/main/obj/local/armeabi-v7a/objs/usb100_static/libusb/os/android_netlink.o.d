@@ -1,0 +1,302 @@
+obj/local/armeabi-v7a/objs/usb100_static/libusb/os/android_netlink.o: \
+ jni/libusb/android/jni/../../libusb/os/android_netlink.c \
+ jni/libusb/android/jni/../../libusb/config.h \
+ jni/libusb/android/jni/../../../utilbase.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/jni.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/cdefs.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/android/api-level.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/inttypes.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/stdint.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/_types.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/machine/_types.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/_wchar_limits.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/android/log.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/unistd.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/types.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/posix_types.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/stddef.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/compiler.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/posix_types.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/types.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/types.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/machine/kernel.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/select.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/time.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/time.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/signal.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/limits.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/limits.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/limits.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/machine/internal_types.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/machine/limits.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/syslimits.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/page.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/string.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/malloc.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/signal.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm-generic/signal.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/sigcontext.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/siginfo.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm-generic/siginfo.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/ucontext.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/user.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/sysconf.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/capability.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/pathconf.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/libgen.h \
+ jni/libusb/android/jni/../../../localdefines.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/assert.h \
+ jni/libusb/android/jni/../../libusb/libusb.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/time.h \
+ jni/libusb/android/jni/../../libusb/libusbi.h \
+ jni/libusb/android/jni/../../libusb/config.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/stdlib.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/alloca.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/strings.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/memory.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/poll.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/poll.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/poll.h \
+ jni/libusb/android/jni/../../libusb/libusb.h \
+ jni/libusb/android/jni/../../libusb/version.h \
+ jni/libusb/android/jni/../../libusb/version_nano.h \
+ jni/libusb/android/jni/../../libusb/os/threads_posix.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/pthread.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sched.h \
+ jni/libusb/android/jni/../../libusb/os/poll_posix.h \
+ jni/libusb/android/jni/../../libusb/os/android_usbfs.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/ctype.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/dirent.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/errno.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/errno.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/errno.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm-generic/errno.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm-generic/errno-base.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/fcntl.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/fcntl.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/fcntl.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm-generic/fcntl.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/stdio.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/socket.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/socket.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/socket.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/sockios.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/sockios.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/uio.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/arpa/inet.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/netinet/in.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/endian.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/endian.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/machine/endian.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/in.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/byteorder.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/byteorder/little_endian.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/byteorder/swab.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/byteorder/generic.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/in6.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/ipv6.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/netinet/in6.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/netlink.h \
+ /Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/filter.h
+
+jni/libusb/android/jni/../../libusb/config.h:
+
+jni/libusb/android/jni/../../../utilbase.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/jni.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/cdefs.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/cdefs_elf.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/android/api-level.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/inttypes.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/stdint.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/_types.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/machine/_types.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/_wchar_limits.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/android/log.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/unistd.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/types.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/posix_types.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/stddef.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/compiler.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/posix_types.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/types.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/types.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/machine/kernel.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/sysmacros.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/select.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/time.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/time.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/signal.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/limits.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/limits.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/limits.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/machine/internal_types.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/machine/limits.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/syslimits.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/page.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/string.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/malloc.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/signal.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm-generic/signal.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/sigcontext.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/siginfo.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm-generic/siginfo.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/ucontext.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/user.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/sysconf.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/capability.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/pathconf.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/libgen.h:
+
+jni/libusb/android/jni/../../../localdefines.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/assert.h:
+
+jni/libusb/android/jni/../../libusb/libusb.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/time.h:
+
+jni/libusb/android/jni/../../libusb/libusbi.h:
+
+jni/libusb/android/jni/../../libusb/config.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/stdlib.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/alloca.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/strings.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/memory.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/poll.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/poll.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/poll.h:
+
+jni/libusb/android/jni/../../libusb/libusb.h:
+
+jni/libusb/android/jni/../../libusb/version.h:
+
+jni/libusb/android/jni/../../libusb/version_nano.h:
+
+jni/libusb/android/jni/../../libusb/os/threads_posix.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/pthread.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sched.h:
+
+jni/libusb/android/jni/../../libusb/os/poll_posix.h:
+
+jni/libusb/android/jni/../../libusb/os/android_usbfs.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/ctype.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/dirent.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/errno.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/errno.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/errno.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm-generic/errno.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm-generic/errno-base.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/fcntl.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/fcntl.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/fcntl.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm-generic/fcntl.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/stdio.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/socket.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/socket.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/socket.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/sockios.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/sockios.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/uio.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/arpa/inet.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/netinet/in.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/endian.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/sys/endian.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/machine/endian.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/in.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/asm/byteorder.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/byteorder/little_endian.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/byteorder/swab.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/byteorder/generic.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/in6.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/ipv6.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/netinet/in6.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/netlink.h:
+
+/Users/MyMac/Library/Android/sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include/linux/filter.h:
