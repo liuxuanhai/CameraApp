@@ -58,8 +58,9 @@
             android:parentActivityName=".InspectionDetails">
 
         </activity>
-
-
+        <activity
+            android:name=".UsbHostActivity">
+        </activity>
     </application>
 
 </manifest>
