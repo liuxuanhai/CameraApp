@@ -6,7 +6,7 @@ package com.android.ippd.cameraapp;
 public class DataStorage {
 
     static String[] partsArray = new String[50];
-    //private boolean already_Init = false;
+    //private static boolean already_Init = false;
 
     //initialize array used for partsSpinner
     protected void partsArray_init(){
