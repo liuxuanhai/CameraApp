@@ -8,7 +8,7 @@
     android:paddingTop="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#91b28e"
+    android:background="#84a781"
     tools:context=".InspectionDetails">
 
 
@@ -133,7 +133,7 @@
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
-        android:layout_toRightOf="@+id/partMenu"
+        android:layout_toEndOf="@+id/partMenu"
         android:layout_below="@id/comments"/>
 
     <Button
@@ -146,7 +146,14 @@
         android:layout_alignBottom="@+id/inspec_details"
         android:layout_alignRight="@+id/title"
         android:layout_alignEnd="@+id/title" />
-        //android:layout_below="@+id/button_inspectionDetails"/>
+
+    <Button
+        android:id="@+id/button_newPart"
+        android:text="@string/newPartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
 

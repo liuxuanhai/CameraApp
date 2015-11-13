@@ -65,5 +65,23 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+    <Button
+        android:id="@+id/backButton"
+        android:text="@string/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/part"
+        android:layout_toStartOf="@+id/part_details"
+        android:layout_alignRight="@+id/part"
+        android:layout_alignEnd="@+id/part" />
+
+    <Button
+        android:id="@+id/submitPartButton"
+        android:text="@string/submitPartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
 

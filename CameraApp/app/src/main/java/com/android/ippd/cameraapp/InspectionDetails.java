@@ -1,6 +1,7 @@
 package com.android.ippd.cameraapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.util.Log;
@@ -10,12 +11,12 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 /**
- * Created by Nicole on 10/21/15.
+ * Created by Nicole K. on 10/21/15.
  */
 public class InspectionDetails extends Activity {
 
     private static final String TAG = ".InspectDetailsActivity";
-    private Button backButton;
+    private Button newPartButton;
     private Spinner partsSpinner;
     private PartDetails PD = new PartDetails();
 
@@ -33,6 +34,8 @@ public class InspectionDetails extends Activity {
 
         // for parts dropdown, will list parts previously created as well as option to create new part
         partsSpinner = (Spinner) findViewById(R.id.partsSpinner);
+
+        //Call below creates unnecessary spaces in spinner FIX NEEDED
         PD.partsArray_init();
         PD.addNewPart("New part1"); // test
         PD.addNewPart("New part2"); // test
@@ -42,10 +45,10 @@ public class InspectionDetails extends Activity {
         partsSpinner.setAdapter(adapter);
 
 
-        backButton = (Button) findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener(){
+        Button backButton = (Button) findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 // Navigate up to parent activity
                 // NavUtils.navigateUpFromSameTask(InspectionDetails.this);
                 // Currently cannot animate when using NavUtils
@@ -53,6 +56,18 @@ public class InspectionDetails extends Activity {
                 // Temporary solution to adding animations
                 finish();
                 overridePendingTransition(R.anim.no_change, R.anim.slide_down);
+            }
+        });
+
+        // Button to go to PartDetails activity
+        newPartButton = (Button)findViewById(R.id.button_newPart);
+        newPartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TAG, "Open PartDetails activity");
+                // Open PartDetails activity
+                Intent x = new Intent(InspectionDetails.this, PartDetails.class);
+                startActivity(x);
             }
         });
     }
