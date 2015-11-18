@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 /**
  * Created by Nicole on 10/21/15.
  */
@@ -59,14 +61,13 @@ public class InspectionDetails extends Activity {
             }
         });
 
-
         // for parts dropdown, will list parts previously created as well as option to create new part
         partsSpinner = (Spinner) findViewById(R.id.partsSpinner);
-        DS.partsArray_init();
+        //DS.partsArray_init();
         DS.addNewPart("Part 1"); // test
-        String[] items = DS.getPartsArray();
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        ArrayList<String> items = DS.getPartsArray();
+        // Create an ArrayAdapter using the string arraylist and a default spinner layout
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         partsSpinner.setAdapter(adapter);
 
     }

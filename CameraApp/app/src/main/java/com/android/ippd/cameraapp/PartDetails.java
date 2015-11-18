@@ -48,6 +48,8 @@ public class PartDetails extends Activity{
                 final String partInput = ((EditText)findViewById(R.id.partText)).getText().toString();
                 DS.addNewPart(partInput);
                 Log.d(TAG, "Submitting new part");
+                finish();
+                overridePendingTransition(R.anim.no_change, R.anim.slide_down);
             }
         });
 

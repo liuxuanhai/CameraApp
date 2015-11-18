@@ -1,32 +1,21 @@
 package com.android.ippd.cameraapp;
 
+import java.util.ArrayList;
+
 /**
  * Created by Nicole K. on 11/13/15.
  */
 public class DataStorage {
 
-    static String[] partsArray = new String[50];
-
-    //initialize array used for partsSpinner
-    protected void partsArray_init(){
-        //initialize partsArray
-        for(int i = 0; i<partsArray.length; i++){
-            partsArray[i] = "";
-        }
-    }
+    //static String[] partsArray = new String[50];
+    static ArrayList<String> partsArray = new ArrayList<String>();
 
     // adds new part to partsArray
-    protected String[] addNewPart(String part){
-        for(int i = 0; i<partsArray.length; i++){
-            if (partsArray[i] == "") {
-                partsArray[i] = part;
-                return partsArray;
-            }
-        }
-        // if return occurs here, then max of 50 parts has been reached for inspection
+    protected ArrayList<String> addNewPart(String part){
+        partsArray.add(part);
         return partsArray;
     }
-    protected String[] getPartsArray(){
+    protected ArrayList<String> getPartsArray(){
         return partsArray;
     }
 
