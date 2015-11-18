@@ -1,7 +1,6 @@
 package com.android.ippd.cameraapp;
 
 import android.app.Activity;
-import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.View;
 import android.os.Bundle;
@@ -16,7 +15,7 @@ public class PartDetails extends Activity{
     private static final String TAG = ".PartDetailsActivity";
     private Button backButton;
     private Button submitPartButton;
-    private DataStorage DS = new DataStorage();
+    private Inspection inspec = new Inspection();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +45,7 @@ public class PartDetails extends Activity{
             @Override
             public void onClick(View v){
                 final String partInput = ((EditText)findViewById(R.id.partText)).getText().toString();
-                DS.addNewPart(partInput);
+                inspec.addNewPart(partInput);
                 Log.d(TAG, "Submitting new part");
                 finish();
                 overridePendingTransition(R.anim.no_change, R.anim.slide_down);

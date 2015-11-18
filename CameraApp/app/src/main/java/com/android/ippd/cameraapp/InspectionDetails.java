@@ -3,7 +3,6 @@ package com.android.ippd.cameraapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -21,7 +20,7 @@ public class InspectionDetails extends Activity {
     private Button backButton;
     private Button newPartButton;
     private Spinner partsSpinner;
-    private DataStorage DS = new DataStorage();
+    private Inspection inspec = new Inspection();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,8 +63,8 @@ public class InspectionDetails extends Activity {
         // for parts dropdown, will list parts previously created as well as option to create new part
         partsSpinner = (Spinner) findViewById(R.id.partsSpinner);
         //DS.partsArray_init();
-        DS.addNewPart("Part 1"); // test
-        ArrayList<String> items = DS.getPartsArray();
+        inspec.addNewPart("Part 1"); // test
+        ArrayList<String> items = inspec.getPartsArray();
         // Create an ArrayAdapter using the string arraylist and a default spinner layout
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         partsSpinner.setAdapter(adapter);
