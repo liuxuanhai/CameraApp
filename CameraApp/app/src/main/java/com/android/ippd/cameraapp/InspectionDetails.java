@@ -7,9 +7,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by Nicole on 10/21/15.
@@ -20,11 +23,13 @@ public class InspectionDetails extends Activity {
     private Button backButton;
     private Button newPartButton;
     private Spinner partsSpinner;
-    private Inspection inspec = new Inspection();
+    private Inspection inspec = new Inspection(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //new Inspection(this).inspection_init();
 
         // Override animation to slide in view from bottom to top
         overridePendingTransition(R.anim.slide_up, R.anim.no_change);
@@ -62,12 +67,13 @@ public class InspectionDetails extends Activity {
 
         // for parts dropdown, will list parts previously created as well as option to create new part
         partsSpinner = (Spinner) findViewById(R.id.partsSpinner);
-        //DS.partsArray_init();
-        inspec.addNewPart("Part 1"); // test
-        ArrayList<String> items = inspec.getPartsArray();
+        ArrayList<Part> items = inspec.getPartsArray();
         // Create an ArrayAdapter using the string arraylist and a default spinner layout
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        ArrayAdapter<Part> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         partsSpinner.setAdapter(adapter);
+
+        // For Date and Time
+        inspec.getDateTime();
 
     }
 

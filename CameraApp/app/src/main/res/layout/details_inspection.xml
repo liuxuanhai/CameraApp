@@ -32,9 +32,19 @@
         android:textStyle="bold"
         android:textSize="30sp"
         android:paddingTop="16dp"
-        android:text="@string/title"
-        android:id="@+id/title"
+        android:text="@string/location"
+        android:id="@+id/location"
         android:layout_below="@+id/inspec_details"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:paddingTop="16dp"
+        android:text="@string/date"
+        android:id="@+id/mDate"
+        android:layout_below="@+id/location"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,7 +54,7 @@
         android:paddingTop="16dp"
         android:text="@string/engine"
         android:id="@+id/engine"
-        android:layout_below="@+id/title"/>
+        android:layout_below="@+id/mDate"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,7 +74,7 @@
         android:paddingTop="16dp"
         android:text="@string/part"
         android:id="@+id/partMenu"
-        android:layout_below="@+id/comments"/>
+        android:layout_below="@+id/inspector"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,14 +84,14 @@
         android:paddingTop="16dp"
         android:text="@string/comments"
         android:id="@+id/comments"
-        android:layout_below="@+id/inspector"/>
+        android:layout_below="@+id/partMenu"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/titleText"
-        android:layout_above="@+id/engine"
-        android:layout_toRightOf="@+id/title"
+        android:id="@+id/locationText"
+        android:layout_above="@+id/mDate"
+        android:layout_toRightOf="@+id/location"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:inputType="textMultiLine"/>
@@ -89,10 +99,21 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/mDateText"
+        android:layout_above="@+id/engine"
+        android:layout_below="@+id/location"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/mDate"
+        android:layout_toRightOf="@+id/mDate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/engineText"
         android:layout_above="@+id/inspector"
-        android:layout_alignRight="@+id/titleText"
-        android:layout_alignEnd="@+id/titleText"
+        android:layout_alignRight="@+id/locationText"
+        android:layout_alignEnd="@+id/locationText"
         android:layout_toEndOf="@+id/engine"
         android:layout_toRightOf="@+id/engine"
         android:inputType="textMultiLine" />
@@ -102,8 +123,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/inspectorText"
         android:layout_above="@+id/partMenu"
-        android:layout_alignRight="@+id/titleText"
-        android:layout_alignEnd="@+id/titleText"
+        android:layout_alignRight="@+id/locationText"
+        android:layout_alignEnd="@+id/locationText"
         android:layout_toRightOf="@+id/inspector"
         android:layout_toEndOf="@+id/inspector"
         android:inputType="textMultiLine" />
@@ -118,15 +139,6 @@
         android:layout_toRightOf="@+id/comments"
         android:layout_toEndOf="@+id/comments" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_above="@+id/comments"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/inspectorText"
-        android:layout_alignStart="@+id/inspectorText" />
 
     <Spinner
         android:id="@+id/partsSpinner"
@@ -135,18 +147,18 @@
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
         android:layout_toRightOf="@+id/partMenu"
-        android:layout_below="@id/comments"/>
+        android:layout_toEndOf="@+id/partMenu"
+        android:layout_below="@+id/inspector"
+        android:layout_above="@+id/commentsText" />
 
     <Button
         android:id="@+id/backButton"
         android:text="@string/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/inspec_details"
+        android:layout_above="@+id/location"
         android:layout_toLeftOf="@+id/inspec_details"
-        android:layout_alignBottom="@+id/inspec_details"
-        android:layout_alignRight="@+id/title"
-        android:layout_alignEnd="@+id/title" />
+        android:layout_toStartOf="@+id/inspec_details" />
 
     <Button
         android:id="@+id/button_newPart"

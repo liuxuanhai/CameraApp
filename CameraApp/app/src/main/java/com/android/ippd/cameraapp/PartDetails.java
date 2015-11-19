@@ -15,7 +15,7 @@ public class PartDetails extends Activity{
     private static final String TAG = ".PartDetailsActivity";
     private Button backButton;
     private Button submitPartButton;
-    private Inspection inspec = new Inspection();
+    private Inspection inspec = new Inspection(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +44,9 @@ public class PartDetails extends Activity{
         submitPartButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                final String partInput = ((EditText)findViewById(R.id.partText)).getText().toString();
-                inspec.addNewPart(partInput);
+                //final String partInput = ((EditText)findViewById(R.id.partText)).getText().toString();
+                //final String partCommentsInput = ((EditText)findViewById(R.id.partCommentsText)).getText().toString();
+                inspec.addNewPart();
                 Log.d(TAG, "Submitting new part");
                 finish();
                 overridePendingTransition(R.anim.no_change, R.anim.slide_down);
