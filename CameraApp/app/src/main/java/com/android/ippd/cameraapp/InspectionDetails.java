@@ -5,10 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,11 +20,11 @@ import java.util.Date;
 /**
  * Created by Nicole on 10/21/15.
  */
-public class InspectionDetails extends Activity {
+public class InspectionDetails extends Activity implements AdapterView.OnItemSelectedListener {
 
     private static final String TAG = ".InspectDetailsActivity";
     private Button backButton;
-    private Button newPartButton;
+    private Button submit;
     private Spinner partsSpinner;
     private Inspection inspec = new Inspection(this);
 
@@ -53,28 +56,47 @@ public class InspectionDetails extends Activity {
             }
         });
 
-        // Button to go to PartDetails activity
-        newPartButton = (Button)findViewById(R.id.button_newPart);
-        newPartButton.setOnClickListener(new View.OnClickListener() {
+        // Button to submit the input data of inspection details
+        submit = (Button)findViewById(R.id.submitInspectionButton);
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "Open settings activity");
+                Log.d(TAG, "Submit Inspection details");
                 // Open settings activity
-                Intent i = new Intent(InspectionDetails.this, PartDetails.class);
-                startActivity(i);
+                inspec.storeInspection(InspectionDetails.this);
             }
         });
 
+        inspec.inspection_init();
+
         // for parts dropdown, will list parts previously created as well as option to create new part
         partsSpinner = (Spinner) findViewById(R.id.partsSpinner);
-        ArrayList<Part> items = inspec.getPartsArray();
+        ArrayList<String> items = inspec.getPartsNameArray();
         // Create an ArrayAdapter using the string arraylist and a default spinner layout
-        ArrayAdapter<Part> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         partsSpinner.setAdapter(adapter);
+        partsSpinner.setOnItemSelectedListener(this);
 
         // For Date and Time
         inspec.getDateTime();
+    }
 
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int j, long l){
+        TextView myText = (TextView) view;
+        if (myText.getText() == "Add New Part"){
+            Log.d(TAG, "Open PartDetails activity");
+            Intent i = new Intent(InspectionDetails.this, PartDetails.class);
+            startActivity(i);
+        }
+        else{
+            Toast.makeText(this, "Part: " + myText.getText() + " selected", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> arg0) {
+        // TODO Auto-generated method stub
     }
 
     // Override onBackPressed to animate view from top to bottom when leaving view

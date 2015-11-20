@@ -160,13 +160,24 @@
         android:layout_toLeftOf="@+id/inspec_details"
         android:layout_toStartOf="@+id/inspec_details" />
 
+    <!--<Button-->
+        <!--android:id="@+id/button_newPart"-->
+        <!--android:text="@string/newPartButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:layout_above="@+id/submitInspectionButton"-->
+        <!--android:layout_toRightOf="@+id/engine"-->
+        <!--android:layout_toEndOf="@+id/engine" />-->
+
     <Button
-        android:id="@+id/button_newPart"
-        android:text="@string/newPartButton"
+        android:id="@+id/submitInspectionButton"
+        android:text="@string/submitPartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_toRightOf="@+id/inspector"
+        android:layout_toEndOf="@+id/inspector" />
 
 </RelativeLayout>
 
