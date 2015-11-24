@@ -123,7 +123,7 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 	private ImageButton mCaptureButton;
 	private ImageButton mViewInspectionsButton;
 	private ImageButton mNewInspectionButton;
-	private Boolean isInspecting = false;
+	private static Boolean isInspecting = false;
 	private static Inspection mNewInspection;
 	private  ArrayList<Inspection> mInspections;
 
@@ -563,8 +563,10 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 			}
 
 			public void handleCaptureStill() {
-				Bitmap picture = Bitmap.createBitmap(mWeakCameraView.get().captureStillImage());
-				mNewInspection.addPicture(picture);
+				if(isInspecting) {
+					Bitmap picture = Bitmap.createBitmap(mWeakCameraView.get().captureStillImage());
+					mNewInspection.addPicture(picture);
+				}
 				if (DEBUG) Log.v(TAG_THREAD, "handleCaptureStill:");
 				final UsbCameraActivity parent = mWeakParent.get();
 				if (parent == null) return;

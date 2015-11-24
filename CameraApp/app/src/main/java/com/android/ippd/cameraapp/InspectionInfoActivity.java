@@ -72,7 +72,7 @@ public class InspectionInfoActivity extends Activity {
 
             if (convertView == null) {
                 imageView = new ImageView(mContext);
-                imageView.setLayoutParams(new GridView.LayoutParams(85, 85));
+                //imageView.setLayoutParams(new GridView.LayoutParams(640, 480));
                 imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 imageView.setPadding(8, 8, 8, 8);
             }
