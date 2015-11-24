@@ -1,11 +1,10 @@
 package com.android.ippd.cameraapp;
 
 import android.app.Activity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
 
 /**
  * Created by Nicole on 11/3/15.
@@ -15,7 +14,7 @@ public class PartDetails extends Activity{
     private static final String TAG = ".PartDetailsActivity";
     private Button backButton;
     private Button submitPartButton;
-    private Inspection inspec = new Inspection(this);
+    private Inspection inspec = new Inspection();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

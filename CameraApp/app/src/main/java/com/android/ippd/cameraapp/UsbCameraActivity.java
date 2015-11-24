@@ -27,6 +27,7 @@ package com.android.ippd.cameraapp;
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.SurfaceTexture;
 import android.hardware.usb.UsbDevice;
@@ -66,6 +67,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 
 public final class UsbCameraActivity extends Activity implements NewInspectionDialogFragment.NoticeDialogListener, CameraDialog.CameraDialogParent {
 	private static final boolean DEBUG = true;	// TODO set false on release
@@ -119,9 +121,11 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 	 * button for start/stop recording
 	 */
 	private ImageButton mCaptureButton;
+	private ImageButton mViewInspectionsButton;
 	private ImageButton mNewInspectionButton;
 	private Boolean isInspecting = false;
-	private static Inspection mInspection;
+	private static Inspection mNewInspection;
+	private  ArrayList<Inspection> mInspections;
 
 	@Override
 	protected void onCreate(final Bundle savedInstanceState) {
@@ -145,6 +149,8 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 		mCaptureButton.setVisibility(View.INVISIBLE);
 		mNewInspectionButton = (ImageButton)findViewById(R.id.addInspection_button);
 		mNewInspectionButton.setOnClickListener(mOnClickListener);
+		mViewInspectionsButton = (ImageButton)findViewById(R.id.viewInspections_button);
+		mViewInspectionsButton.setOnClickListener(mOnClickListener);
 		final View view = findViewById(R.id.camera_view);
 		//view.setOnLongClickListener(mOnLongClickListener);
 		mUVCCameraView = (CameraViewInterface)view;
@@ -152,6 +158,8 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 
 		mUSBMonitor = new USBMonitor(this, mOnDeviceConnectListener);
 		mHandler = CameraHandler.createHandler(this,mUVCCameraView);
+
+		mInspections = InspectionList.get(getApplicationContext()).getInspections();
 	}
 
 	// The dialog fragment receives a reference to this Activity through the
@@ -160,11 +168,12 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 	@Override
 	public void onDialogPositiveClick(DialogFragment dialog) {
 		// User touched the dialog's positive button
-		Toast.makeText(this,"You have started a new inspection.",Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "You have started a new inspection.", Toast.LENGTH_SHORT).show();
 		Log.d(TAG, "Positive pressed");
 		isInspecting = true;
-		mInspection = new Inspection(this);
-
+		mNewInspection = new Inspection();
+		mNewInspection.setTitle("Inspection for: " + mNewInspection.getDateTime());
+		mInspections.add(mNewInspection);
 
 		// Create new Inspection
 	}
@@ -250,6 +259,9 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 					DialogFragment dialog = new NewInspectionDialogFragment();
 					dialog.show(getFragmentManager(), "NewInspectionDialogFragment");
 					break;
+				case R.id.viewInspections_button:
+					Intent i = new Intent(UsbCameraActivity.this,InspectionListActivity.class);
+					startActivity(i);
 			}
 		}
 	};
@@ -551,6 +563,8 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 			}
 
 			public void handleCaptureStill() {
+				Bitmap picture = Bitmap.createBitmap(mWeakCameraView.get().captureStillImage());
+				mNewInspection.addPicture(picture);
 				if (DEBUG) Log.v(TAG_THREAD, "handleCaptureStill:");
 				final UsbCameraActivity parent = mWeakParent.get();
 				if (parent == null) return;
@@ -567,8 +581,6 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 							bitmap.compress(Bitmap.CompressFormat.PNG, 100, os);
 							os.flush();
 							mHandler.sendMessage(mHandler.obtainMessage(MSG_MEDIA_UPDATE, outputFile.getPath()));
-							// Add picture to inspection
-							mInspection.addPicture(bitmap);
 						} catch (final IOException e) {
 						}
 					} finally {

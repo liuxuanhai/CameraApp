@@ -8,14 +8,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * Created by Nicole on 10/21/15.
@@ -26,7 +23,7 @@ public class InspectionDetails extends Activity implements AdapterView.OnItemSel
     private Button backButton;
     private Button submit;
     private Spinner partsSpinner;
-    private Inspection inspec = new Inspection(this);
+    private Inspection inspec = new Inspection();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

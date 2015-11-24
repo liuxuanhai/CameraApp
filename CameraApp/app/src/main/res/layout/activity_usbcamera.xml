@@ -59,6 +59,15 @@
         android:text="ToggleButton" />
 
     <ImageButton
+        android:id="@+id/viewInspections_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@null"
+        android:scaleType="center"
+        android:layout_alignEnd="@id/camera_view"
+        android:src="@android:drawable/ic_menu_gallery"/>
+
+    <ImageButton
         android:id="@+id/capture_button"
         android:layout_width="@dimen/button_size"
         android:layout_height="@dimen/button_size"

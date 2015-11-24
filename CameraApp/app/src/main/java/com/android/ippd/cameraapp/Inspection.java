@@ -8,12 +8,15 @@ import android.widget.EditText;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Created by Nicole K. on 11/13/15.
  */
 public class Inspection {
     private static final String TAG = ".Inspection";
+    private UUID mId;
+    private String mtitle;
 
     // used for accessing elements from activity with viewById()
     private Activity activity;
@@ -27,8 +30,17 @@ public class Inspection {
     private static String mComments;
     private static String mDate;
 
-    public Inspection(Activity activity){
-        this.activity = activity;
+    public Inspection(){
+        mId = UUID.randomUUID();
+        mInspector = "";
+        mEngine = "";
+        mLocation = "";
+        mComments = "";
+        mDate = "";
+    }
+
+    public String getTitle(){
+        return mtitle;
     }
 
     protected void inspection_init(){
@@ -52,10 +64,10 @@ public class Inspection {
 
     protected String getDateTime(){
         Date dNow = new Date();
-        EditText mDateText = (EditText)activity.findViewById(R.id.mDateText);
+        //EditText mDateText = (EditText)activity.findViewById(R.id.mDateText);
         SimpleDateFormat dateFormat = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm a zzz");
         mDate = dateFormat.format(dNow);
-        mDateText.setText(mDate);
+        //mDateText.setText(mDate);
         return mDate;
     }
 
@@ -85,9 +97,21 @@ public class Inspection {
         mDate = date.getText().toString();
     }
 
-    protected void addPicture(Bitmap bitmap){
+    public void addPicture(Bitmap bitmap){
         inspectionPictures.add(bitmap);
         Log.d(TAG, "# Pictures in inspection: " + inspectionPictures.size());
+    }
+
+    public ArrayList<Bitmap> getPictures(){
+        return inspectionPictures;
+    }
+
+    public UUID getId() {
+        return mId;
+    }
+
+    public void setTitle(String title){
+        mtitle = title;
     }
 
 }
