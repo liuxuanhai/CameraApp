@@ -49,6 +49,7 @@ public class Inspection {
         mDate = date.getText().toString();
 
     }
+
     protected String getDateTime(){
         Date dNow = new Date();
         EditText mDateText = (EditText)activity.findViewById(R.id.mDateText);

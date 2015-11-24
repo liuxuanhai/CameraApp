@@ -120,6 +120,7 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 	 */
 	private ImageButton mCaptureButton;
 	private ImageButton mNewInspectionButton;
+	private Boolean isInspecting = false;
 	private static Inspection mInspection;
 
 	@Override
@@ -161,7 +162,7 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 		// User touched the dialog's positive button
 		Toast.makeText(this,"You have started a new inspection.",Toast.LENGTH_SHORT).show();
 		Log.d(TAG, "Positive pressed");
-
+		isInspecting = true;
 		mInspection = new Inspection(this);
 
 
