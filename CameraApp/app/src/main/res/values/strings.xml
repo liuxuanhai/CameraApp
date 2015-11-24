@@ -12,4 +12,7 @@
     <string name="backButton">Back</string>
     <string name="submitPartButton">Submit</string>
     <string name="newPartButton">Add new part</string>
+    <string name="dialogNewInspection">Would you like to start a new inspection?</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.android.ippd.cameraapp;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.util.Log;
 import android.widget.EditText;
 
 import java.text.SimpleDateFormat;
@@ -11,12 +13,14 @@ import java.util.Date;
  * Created by Nicole K. on 11/13/15.
  */
 public class Inspection {
+    private static final String TAG = ".Inspection";
 
     // used for accessing elements from activity with viewById()
     private Activity activity;
 
     private static ArrayList<Part> partsArray = new ArrayList<Part>();
     private static ArrayList<String> partsNameArray = new ArrayList<String>();
+    private ArrayList<Bitmap> inspectionPictures = new ArrayList<Bitmap>();
     private static String mInspector;
     private static String mEngine;
     private static String mLocation;
@@ -78,6 +82,11 @@ public class Inspection {
         mComments = comm.getText().toString();
         EditText date = (EditText) activity.findViewById(R.id.mDateText);
         mDate = date.getText().toString();
+    }
+
+    protected void addPicture(Bitmap bitmap){
+        inspectionPictures.add(bitmap);
+        Log.d(TAG, "# Pictures in inspection: " + inspectionPictures.size());
     }
 
 }

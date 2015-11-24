@@ -36,6 +36,11 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // For API > 23
+        //int permissionCheck = ContextCompat.checkSelfPermission(MainActivity.this,
+          //      Manifest.permission.WRITE_CALENDAR);
+
         setContentView(R.layout.activity_main);
 
         // Hide the soft keys
