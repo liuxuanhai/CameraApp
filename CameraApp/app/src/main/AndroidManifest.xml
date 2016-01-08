@@ -52,11 +52,14 @@
         <activity
             android:name=".InspectionDetails"
             android:parentActivityName=".MainActivity">
+            </activity>
+        <activity
+            android:name=".AlbumView"
+            android:parentActivityName=".MainActivity">
         </activity>
             <activity
             android:name=".PartDetails"
             android:parentActivityName=".InspectionDetails">
-
         </activity>
         <activity
             android:name=".UsbHostActivity">

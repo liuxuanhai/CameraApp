@@ -55,7 +55,7 @@ public class Inspection {
     }
 
     // adds new part to partsArray
-    protected ArrayList<String> addNewPart(/*String part, String comments*/){
+    protected ArrayList<String> addNewPart(){
         Part partItem = new Part(this.activity);
         partItem.part_init();
         partsArray.add(partItem);   // this array contains Part objects
@@ -78,6 +78,11 @@ public class Inspection {
         mComments = comm.getText().toString();
         EditText date = (EditText) activity.findViewById(R.id.mDateText);
         mDate = date.getText().toString();
+    }
+
+    // Location input is default name of inspection; Ask Siemens for preference
+    public String getInspecName(){
+        return mLocation;
     }
 
 }

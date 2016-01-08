@@ -12,4 +12,6 @@
     <string name="backButton">Back</string>
     <string name="submitPartButton">Submit</string>
     <string name="newPartButton">Add new part</string>
+    <string name="inspec_album_title">Inspections</string>
+
 </resources>
