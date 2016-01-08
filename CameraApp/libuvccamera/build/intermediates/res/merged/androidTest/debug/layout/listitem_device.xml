@@ -31,4 +31,4 @@
 	android:minHeight="@dimen/list_height_min"
     android:textSize="@dimen/list_font_size" >
 
-</CheckedTextView><!-- From: file:/Users/MyMac/Desktop/git/CameraApp/CameraApp/libuvccamera/src/main/res/layout/listitem_device.xml --><!-- From: file:/Users/MyMac/Desktop/git/CameraApp/CameraApp/libuvccamera/build/intermediates/bundles/debug/res/layout/listitem_device.xml -->
+</CheckedTextView><!-- From: file:/Users/MyMac/Desktop/git/CameraApp/CameraApp/CameraApp/libuvccamera/src/main/res/layout/listitem_device.xml --><!-- From: file:/Users/MyMac/Desktop/git/CameraApp/CameraApp/CameraApp/libuvccamera/build/intermediates/bundles/debug/res/layout/listitem_device.xml -->

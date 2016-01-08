@@ -53,4 +53,4 @@
         android:layout_height="wrap_content"
         android:text="@string/no_device" />
 
-</LinearLayout><!-- From: file:/Users/MyMac/Desktop/git/CameraApp/CameraApp/libuvccamera/src/main/res/layout/dialog_camera.xml -->
+</LinearLayout><!-- From: file:/Users/MyMac/Desktop/git/CameraApp/CameraApp/CameraApp/libuvccamera/src/main/res/layout/dialog_camera.xml -->

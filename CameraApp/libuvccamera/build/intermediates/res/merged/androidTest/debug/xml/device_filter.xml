@@ -3,4 +3,4 @@
 <usb>
 	<usb-device class="239" subclass="2" />	<!-- all device of UVC -->
 </usb>
-<!-- From: file:/Users/MyMac/Desktop/git/CameraApp/CameraApp/libuvccamera/src/main/res/xml/device_filter.xml --><!-- From: file:/Users/MyMac/Desktop/git/CameraApp/CameraApp/libuvccamera/build/intermediates/bundles/debug/res/xml/device_filter.xml -->
+<!-- From: file:/Users/MyMac/Desktop/git/CameraApp/CameraApp/CameraApp/libuvccamera/src/main/res/xml/device_filter.xml --><!-- From: file:/Users/MyMac/Desktop/git/CameraApp/CameraApp/CameraApp/libuvccamera/build/intermediates/bundles/debug/res/xml/device_filter.xml -->
