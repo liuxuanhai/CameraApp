@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
     private Button inspectionDetailsButton;
     private Button usbHostButton;
     private Button usbTestButton;
+    private Button albumViewButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +69,8 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 // get an image from the camera
-                mCamera.takePicture(null,null,mPicture);
-                Log.d(TAG,"Taking a picture");
+                mCamera.takePicture(null, null, mPicture);
+                Log.d(TAG, "Taking a picture");
             }
         });
 
@@ -81,6 +82,17 @@ public class MainActivity extends Activity {
                 Log.d(TAG, "Open settings activity");
                 // Open settings activity
                 Intent i = new Intent(MainActivity.this, InspectionDetails.class);
+                startActivity(i);
+            }
+        });
+
+        // Button to go to AlbumView activity
+        albumViewButton = (Button)findViewById(R.id.button_albumView);
+        albumViewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TAG, "Open AlbumView activity");
+                Intent i = new Intent(MainActivity.this, AlbumView.class);
                 startActivity(i);
             }
         });

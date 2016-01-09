@@ -7,9 +7,10 @@
     android:paddingBottom="16dp"
     android:paddingTop="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#84a781"
     tools:context=".InspectionDetails">
+
 
 
     <TextView
@@ -24,7 +25,7 @@
         android:id="@+id/inspec_details"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

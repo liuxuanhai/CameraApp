@@ -29,8 +29,9 @@ public class Inspection {
     private static String mLocation;
     private static String mComments;
     private static String mDate;
-
-    public Inspection(){
+    
+    public Inspection(Activity activity){
+        this.activity = activity;
         mId = UUID.randomUUID();
         mInspector = "";
         mEngine = "";
@@ -64,15 +65,15 @@ public class Inspection {
 
     protected String getDateTime(){
         Date dNow = new Date();
-        //EditText mDateText = (EditText)activity.findViewById(R.id.mDateText);
+        EditText mDateText = (EditText)activity.findViewById(R.id.mDateText);
         SimpleDateFormat dateFormat = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm a zzz");
         mDate = dateFormat.format(dNow);
-        //mDateText.setText(mDate);
+        mDateText.setText(mDate);
         return mDate;
     }
 
     // adds new part to partsArray
-    protected ArrayList<String> addNewPart(/*String part, String comments*/){
+    protected ArrayList<String> addNewPart(){
         Part partItem = new Part(this.activity);
         partItem.part_init();
         partsArray.add(partItem);   // this array contains Part objects
@@ -112,6 +113,11 @@ public class Inspection {
 
     public void setTitle(String title){
         mtitle = title;
+    }
+
+    // Location input is default name of inspection; Ask Siemens for preference
+    public String getInspecName(){
+        return mLocation;
     }
 
 }

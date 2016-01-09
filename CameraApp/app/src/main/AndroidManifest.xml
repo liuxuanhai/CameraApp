@@ -55,6 +55,11 @@
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
+            android:parentActivityName=".MainActivity">
+            </activity>
+        <activity
+            android:name=".AlbumView"
+            android:parentActivityName=".MainActivity">
         </activity>
             <activity
             android:name=".PartDetails"
