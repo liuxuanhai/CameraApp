@@ -120,6 +120,8 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 	/**
 	 * button for start/stop recording
 	 */
+
+	Activity activity;
 	private ImageButton mCaptureButton;
 	private ImageButton mViewInspectionsButton;
 	private ImageButton mNewInspectionButton;
@@ -171,7 +173,7 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 		Toast.makeText(this, "You have started a new inspection.", Toast.LENGTH_SHORT).show();
 		Log.d(TAG, "Positive pressed");
 		isInspecting = true;
-		mNewInspection = new Inspection();
+		mNewInspection = new Inspection(activity);
 		mNewInspection.setTitle("Inspection for: " + mNewInspection.getDateTime());
 		mInspections.add(mNewInspection);
 

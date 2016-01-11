@@ -11,10 +11,11 @@ import android.widget.Button;
  */
 public class PartDetails extends Activity{
 
+    Activity activity;
     private static final String TAG = ".PartDetailsActivity";
     private Button backButton;
     private Button submitPartButton;
-    private Inspection inspec = new Inspection();
+    private Inspection inspec = new Inspection(this.activity);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
