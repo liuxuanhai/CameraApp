@@ -44,6 +44,7 @@ import android.util.Log;
 import android.view.Surface;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -121,6 +122,9 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 	 * button for start/stop recording
 	 */
 
+	private Button inspectionDetailsButton;
+//	button that goes to metadata input
+
 	Activity activity;
 	private ImageButton mCaptureButton;
 	private ImageButton mViewInspectionsButton;
@@ -162,6 +166,18 @@ public final class UsbCameraActivity extends Activity implements NewInspectionDi
 		mHandler = CameraHandler.createHandler(this,mUVCCameraView);
 
 		mInspections = InspectionList.get(getApplicationContext()).getInspections();
+
+		// Button to go to InspectionDetails activity
+		inspectionDetailsButton = (Button)findViewById(R.id.button_inspectionDetails);
+		inspectionDetailsButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Log.d(TAG, "Open settings activity");
+				// Open settings activity
+				Intent i = new Intent(UsbCameraActivity.this, InspectionDetails.class);
+				startActivity(i);
+			}
+		});
 	}
 
 	// The dialog fragment receives a reference to this Activity through the
